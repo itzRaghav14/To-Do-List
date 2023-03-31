@@ -8,6 +8,9 @@ const path = require('path');
 // declaring port
 const port = 8000;
 
+// use express routes
+app.use('/', require('./routes'));
+
 // app listening
 app.listen(port, function(err){
     if(err){
