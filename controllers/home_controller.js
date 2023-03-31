@@ -8,8 +8,8 @@ module.exports.home = function(req, res){
         }
         console.log(`The tasks have been fetched`);
         return res.render('home', {
-            'title' : 'To Do List',
-            'tasksList' : tasks
+            title : 'To Do List',
+            tasksList : tasks
         });
     });
 
@@ -26,7 +26,7 @@ module.exports.createTask = function(req, res){
             return;
         }
         console.log(`Task has been added : ${newTask}`);
-        return redirect('back');
+        return res.redirect('back');
     });
 }
 
