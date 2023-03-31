@@ -2,14 +2,24 @@
 const express = require('express');
 const app = express();
 
-// including path
+// including path, database, body-parser
 const path = require('path');
+const db = require('./config/mongoose');
+const bodyParser = require('body-parser');
 
 // declaring port
 const port = 8000;
 
+// middlewares
+app.use(bodyParser.urlencoded({extended : false}));
+// app.use(express.static('assets'));
+
 // use express routes
 app.use('/', require('./routes'));
+
+// setting up view engine
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 // app listening
 app.listen(port, function(err){

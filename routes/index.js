@@ -7,9 +7,7 @@ const homeController = require('../controllers/home_controller');
 
 // get requests
 router.get('/', homeController.home);
-
-// passing it on to other file
-router.use('/users', require('./users'));
+router.post('/create-task', homeController.createTask);
 
 // exporting router
 module.exports = router;
