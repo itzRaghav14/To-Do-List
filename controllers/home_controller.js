@@ -12,7 +12,6 @@ module.exports.home = function(req, res){
             tasksList : tasks
         });
     });
-
 }
 
 module.exports.createTask = function(req, res){
@@ -30,4 +29,13 @@ module.exports.createTask = function(req, res){
     });
 }
 
-
+module.exports.deleteTask = function(req, res){
+    Task.findByIdAndDelete(req.query.id, function(err){
+        if(err){
+            console.log(`Error in deleting the task : ${err}`);
+            return;
+        }
+        console.log('Task has been deleted.');
+        return res.redirect('back');
+    });
+}

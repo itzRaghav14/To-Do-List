@@ -14,7 +14,12 @@
     <h1>This is the contact list</h1>
     <ul>
         <% for(let task of tasksList) { %> 
-            <li> <%= task.description %> - <%= task.date %> - <%= task.category %> </li>
+            <li> 
+                <%= task.description %> - 
+                <%= task.date %> - 
+                <%= task.category %> -
+                <a href="/delete-task?id=<%= task._id %>">delete button</a>
+            </li>
         <% } %>
     </ul>
 
