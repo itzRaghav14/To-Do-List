@@ -1,0 +1,20 @@
+/* Color Classes for different categories */
+.personal-color{
+    background-color: mediumslateblue;
+}
+
+.college-color{
+    background-color: blue;
+}
+
+.work-color{
+    background-color: red;
+}
+
+.home-color{
+    background-color: orange;
+}
+
+.other-color{
+    background-color: green;
+}

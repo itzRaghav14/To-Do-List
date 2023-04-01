@@ -7,6 +7,8 @@ const homeController = require('../controllers/home_controller');
 
 // get requests
 router.get('/', homeController.home);
+
+// post requests
 router.post('/create-task', homeController.createTask);
 router.post('/delete-task', homeController.deleteTask);
 
