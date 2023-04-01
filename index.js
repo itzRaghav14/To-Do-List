@@ -12,7 +12,7 @@ const port = 8000;
 
 // middlewares
 app.use(bodyParser.urlencoded({extended : false}));
-// app.use(express.static('assets'));
+app.use(express.static('assets'));
 
 // use express routes
 app.use('/', require('./routes'));
